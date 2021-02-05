@@ -31,7 +31,7 @@ It is important to note that the target metadata model will need to be evolutive
 
 ~~A [publicly viewable Google Sheet](https://docs.google.com/spreadsheets/d/1c8Jdu997crtlHzYlCdQ-cAHTfRtSB3eHV4GOhNBVcJM/edit?usp=sharing) serves as the current state of the target data model.~~
 
-The data model is being converted to UML:
+The data model has been converted to [UML](./uml/datamodel.puml):
 
 ![data_model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/anansi-project/rfcs/master/uml/datamodel.puml)
 
