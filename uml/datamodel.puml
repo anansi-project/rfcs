@@ -92,7 +92,7 @@ Book "0..*" -up-o "0..*" Tag: > has tags
 Book "1" -up- "0..*" ExternalId: > has externalIds
 Book  -up- "0..1"  ReadingDirection: > read as
 
-Book "0..*" -- "0..*" Author: < wrote: role
+Book "0..*" -- "0..*" Author: < wrote
 (Book, Author) .. Work
 
 Book "0..*" -- "0..*" BookCollection: > part of
