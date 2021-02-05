@@ -1,0 +1,106 @@
+@startuml
+title Data model
+
+class Book {
+    String: title
+    String?: summary
+    Date?: releaseDate
+    String?: language
+    Int?: ageRating
+    String?: ISBN
+}
+
+class Series {
+    String: title
+    String?: titleSort
+}
+
+class SeriesIssue {
+    String?: issueNumber
+    Float?: issueNumberSort
+}
+
+class Publisher {
+    String: name
+}
+
+enum ReadingDirection {
+    LTR
+    RTL
+    Vertical
+}
+
+class Author {
+    String: name
+}
+
+class Work {
+    String: role
+}
+
+class BookCollection {
+    String: name
+    String?: nameSort
+    Bool?: ended
+}
+
+class BookCollectionEntry {
+    String?: number
+    String?: numberSort
+}
+
+class SeriesCollectionEntry {
+    String?: number
+    String?: numberSort
+}
+
+class SeriesCollection {
+    String: name
+    String?: nameSort
+    Bool?: ended
+}
+
+class Genre {
+    String: value
+}
+
+class Tag {
+    String: value
+}
+
+class ExternalId {
+    String: url
+    String: id
+    String?: referential
+}
+
+
+enum SeriesStatus {
+    ONGOING
+    ENDED
+    ABANDONED
+    HIATUS
+}
+
+
+Book "0..*" - "0..1" Series: > part of
+(Book, Series) .. SeriesIssue
+
+Book "0..*" -up- "0..1" Publisher: > published by
+Book "0..*" -up-o "0..*" Genre: > has genres
+Book "0..*" -up-o "0..*" Tag: > has tags
+Book "1" -up- "0..*" ExternalId: > has externalIds
+Book  -up- "0..1"  ReadingDirection: > read as
+
+Book "0..*" -- "0..*" Author: < wrote: role
+(Book, Author) .. Work
+
+Book "0..*" -- "0..*" BookCollection: > part of
+(Book, BookCollection) .. BookCollectionEntry
+
+
+Series -up- "0..1" SeriesStatus: > status
+Series "0..*" - "0..*" SeriesCollection: > part of
+(Series, SeriesCollection) .. SeriesCollectionEntry
+
+@enduml

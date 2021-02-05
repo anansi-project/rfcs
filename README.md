@@ -29,7 +29,11 @@ Using the existing metadata models from the various containers will help to high
 
 It is important to note that the target metadata model will need to be evolutive, and as such, to be versioned.
 
-A [publicly viewable Google Sheet](https://docs.google.com/spreadsheets/d/1c8Jdu997crtlHzYlCdQ-cAHTfRtSB3eHV4GOhNBVcJM/edit?usp=sharing) serves as the current state of the target data model.
+~~A [publicly viewable Google Sheet](https://docs.google.com/spreadsheets/d/1c8Jdu997crtlHzYlCdQ-cAHTfRtSB3eHV4GOhNBVcJM/edit?usp=sharing) serves as the current state of the target data model.~~
+
+The data model is being converted to UML:
+
+![data_model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/anansi-project/rfcs/master/uml/datamodel.puml)
 
 If you want to provide comment about the target data model, create a Github Issue.
 
