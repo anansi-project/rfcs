@@ -23,15 +23,13 @@ Let's take for example the ComicRack `ComicInfo.xml` format:
 
 ### Target metadata model (the WHAT)
 
-Before discussing any implementation details (the _HOW_), we should work our toward a target metadata model which can cater for all the different use cases the community has around metadata.
+Before discussing any implementation details (the _HOW_), we should work toward a target metadata model which can cater for all the different use cases the community has around metadata.
 
 Using the existing metadata models from the various containers will help to highlight their limitations, and to work toward a better model.
 
 It is important to note that the target metadata model will need to be evolutive, and as such, to be versioned.
 
-~~A [publicly viewable Google Sheet](https://docs.google.com/spreadsheets/d/1c8Jdu997crtlHzYlCdQ-cAHTfRtSB3eHV4GOhNBVcJM/edit?usp=sharing) serves as the current state of the target data model.~~
-
-The data model has been converted to [UML](./uml/datamodel.puml):
+The following [UML](./uml/datamodel.puml) data model serves as the current state of the target data model:
 
 ![data_model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/anansi-project/rfcs/master/uml/datamodel.puml)
 
